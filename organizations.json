@@ -1,0 +1,27 @@
+{
+  "ORGEWRB2J": {
+    "org_id": "ORGEWRB2J",
+    "org_name": "sensation control ltd",
+    "org_email": "divyanshuapk@gmail.com",
+    "domain": "ltd",
+    "industry": "Technology",
+    "company_size": "501-1000",
+    "admin_user_id": "Divyanshu",
+    "api_key": "Cjv789b2sgAuEcWSg16Afl6GqmWSMQ6K",
+    "created_at": "2026-02-10T08:03:12.250790",
+    "is_active": true,
+    "settings": {
+      "primary_color": "#1F6B4F",
+      "secondary_color": "#0a0e14",
+      "logo_path": "",
+      "allow_external_users": true,
+      "require_email_verification": false
+    },
+    "members": [
+      "Divyanshu"
+    ],
+    "total_users": 0,
+    "total_jobs_posted": 0,
+    "total_applications": 0
+  }
+}

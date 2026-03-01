@@ -1,0 +1,56 @@
+[
+  {
+    "at": "2026-02-24T06:04:05.036313",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:07.262948",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:08.285751",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:08.911705",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:09.490306",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:09.779231",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:10.337191",
+    "actor": "DIVYANSHU",
+    "action": "alert_acknowledged",
+    "details": "stale::JOB4239::Divyanshu"
+  },
+  {
+    "at": "2026-02-24T06:04:53.960508",
+    "actor": "DIVYANSHU",
+    "action": "role_updated",
+    "details": "DIVYANSHU -> admin"
+  },
+  {
+    "at": "2026-02-24T06:05:00.426709",
+    "actor": "DIVYANSHU",
+    "action": "role_updated",
+    "details": "DIVYANSHU -> recruiter"
+  }
+]
