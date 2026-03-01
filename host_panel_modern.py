@@ -386,6 +386,62 @@ MODERN_CSS = """
 def host_dashboard():
     # Apply modern CSS
     st.markdown(MODERN_CSS, unsafe_allow_html=True)
+
+    if st.session_state.get("device_mode") == "mobile":
+        st.markdown("""
+        <style>
+        .panel-header {
+            background: linear-gradient(145deg, rgba(10, 20, 38, 0.9), rgba(14, 26, 48, 0.82)) !important;
+            border: 1px solid rgba(66, 244, 231, 0.26) !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.30) !important;
+            border-radius: 12px !important;
+            padding: 14px !important;
+            margin-bottom: 12px !important;
+        }
+
+        .panel-title {
+            color: #5ef9ff !important;
+            font-size: 22px !important;
+            text-shadow: 0 0 12px rgba(94, 249, 255, 0.35) !important;
+        }
+
+        .panel-subtitle {
+            color: #c8def8 !important;
+        }
+
+        .job-card,
+        .candidate-card,
+        .metric-card,
+        .filter-box {
+            background: linear-gradient(145deg, rgba(10, 20, 38, 0.9), rgba(14, 26, 48, 0.82)) !important;
+            border: 1px solid rgba(84, 166, 255, 0.24) !important;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.30) !important;
+            border-radius: 12px !important;
+        }
+
+        .job-card:hover,
+        .candidate-card:hover,
+        .metric-card:hover {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.34) !important;
+        }
+
+        .metric-value {
+            color: #5ef9ff !important;
+        }
+
+        [data-testid="stButton"] button {
+            background: linear-gradient(130deg, #1f6fff, #00c8ff) !important;
+            border: 1px solid rgba(66, 244, 231, 0.38) !important;
+            box-shadow: 0 8px 16px rgba(8, 16, 34, 0.40), 0 0 12px rgba(31, 111, 255, 0.28) !important;
+        }
+
+        [data-testid="stButton"] button:hover {
+            background: linear-gradient(130deg, #2f7fff, #00d8ff) !important;
+            transform: translateY(-1px) !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
     
     # Initialize session states
     if "host_page" not in st.session_state:

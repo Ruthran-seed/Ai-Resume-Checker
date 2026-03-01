@@ -353,32 +353,162 @@ def apply_device_mode_styles(device_mode):
         st.markdown("""
         <style>
         [data-testid="stAppViewContainer"] .block-container {
-            padding-top: 4rem !important;
-            padding-left: 0.8rem !important;
-            padding-right: 0.8rem !important;
-            max-width: 100% !important;
+            padding-top: 1.1rem !important;
+            padding-left: 0.55rem !important;
+            padding-right: 0.55rem !important;
+            max-width: 560px !important;
+            margin: 0 auto !important;
         }
+
+        [data-testid="stAppViewContainer"] {
+            background:
+                radial-gradient(circle at 10% 12%, rgba(0, 255, 209, 0.16), rgba(0, 255, 209, 0) 35%),
+                radial-gradient(circle at 85% 10%, rgba(168, 92, 255, 0.19), rgba(168, 92, 255, 0) 38%),
+                radial-gradient(circle at 18% 86%, rgba(72, 161, 255, 0.14), rgba(72, 161, 255, 0) 40%),
+                linear-gradient(145deg, #060b14 0%, #0b1322 48%, #111a2f 100%) !important;
+        }
+
+        [data-testid="stHeader"] {
+            background: rgba(5, 10, 20, 0.92) !important;
+            border-bottom: 1px solid rgba(66, 244, 231, 0.28) !important;
+            backdrop-filter: blur(8px);
+        }
+
+        [data-testid="stAppViewContainer"] h1,
+        [data-testid="stAppViewContainer"] h2,
+        [data-testid="stAppViewContainer"] h3,
+        [data-testid="stAppViewContainer"] h4,
+        [data-testid="stAppViewContainer"] h5,
+        [data-testid="stAppViewContainer"] h6,
+        [data-testid="stAppViewContainer"] .stMarkdown h1,
+        [data-testid="stAppViewContainer"] .stMarkdown h2,
+        [data-testid="stAppViewContainer"] .stMarkdown h3,
+        [data-testid="stAppViewContainer"] .stMarkdown h4,
+        [data-testid="stAppViewContainer"] .stMarkdown h5,
+        [data-testid="stAppViewContainer"] .stMarkdown h6 {
+            font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.9px !important;
+            font-weight: 800 !important;
+            text-shadow: 0 0 16px rgba(0, 255, 209, 0.28) !important;
+            text-align: center !important;
+            display: block !important;
+            width: fit-content !important;
+            max-width: 94% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 10px !important;
+            padding: 8px 18px !important;
+            border-radius: 14px !important;
+            border: 1px solid rgba(66, 244, 231, 0.35) !important;
+            background: linear-gradient(120deg, rgba(9, 20, 40, 0.86), rgba(18, 33, 58, 0.78)) !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30) !important;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, span, label, li, small, div {
+            color: #e7f3ff !important;
+        }
+
+        [data-testid="stAppViewContainer"] .block-container > div {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            backdrop-filter: none !important;
+        }
+
+        [data-testid="stAppViewContainer"] div[style*="background:"] {
+            background: linear-gradient(145deg, rgba(11, 23, 44, 0.88), rgba(16, 30, 56, 0.78)) !important;
+            color: #e7f3ff !important;
+            border: 1px solid rgba(66, 244, 231, 0.25) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.28) !important;
+            backdrop-filter: blur(8px) !important;
+        }
+
+        [data-testid="stTextInput"] input,
+        [data-testid="stTextArea"] textarea,
+        [data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+        [data-testid="stNumberInput"] input,
+        [data-testid="stDateInput"] input {
+            background: linear-gradient(145deg, rgba(16, 28, 52, 0.95), rgba(12, 22, 42, 0.90)) !important;
+            color: #dff5ff !important;
+            border: 1px solid rgba(83, 170, 255, 0.38) !important;
+            border-radius: 10px !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 14px rgba(5, 10, 20, 0.35) !important;
+        }
+
+        [data-testid="stTextInput"] input:focus,
+        [data-testid="stTextArea"] textarea:focus,
+        [data-testid="stNumberInput"] input:focus {
+            border-color: rgba(66, 244, 231, 0.92) !important;
+            box-shadow: 0 0 0 2px rgba(66, 244, 231, 0.18), 0 0 18px rgba(66, 244, 231, 0.24) !important;
+        }
+
+        .stButton > button {
+            height: 2.8em !important;
+            font-size: 0.94rem !important;
+            border-radius: 10px !important;
+            border: 1px solid rgba(66, 244, 231, 0.48) !important;
+            background: linear-gradient(130deg, #1f6fff, #00c8ff) !important;
+            color: #ffffff !important;
+            font-weight: 800 !important;
+            box-shadow: 0 8px 16px rgba(6, 16, 34, 0.40), 0 0 14px rgba(31, 111, 255, 0.30) !important;
+        }
+
+        .stButton > button:hover {
+            background: linear-gradient(130deg, #2f7fff, #00d8ff) !important;
+            transform: translateY(-1px) !important;
+            filter: none !important;
+        }
+
+        [data-testid="stAppViewContainer"] .stMarkdown,
+        [data-testid="stAlert"],
+        [data-testid="stExpander"],
+        [data-testid="stDataFrame"],
+        [data-testid="stTable"] {
+            background: linear-gradient(145deg, rgba(10, 20, 38, 0.88), rgba(14, 24, 46, 0.80)) !important;
+            border: 1px solid rgba(84, 166, 255, 0.28) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.30) !important;
+            color: #e7f3ff !important;
+        }
+
+        [data-testid="stSidebar"] {
+            background: linear-gradient(160deg, rgba(8,14,28,0.98), rgba(12,20,36,0.98)) !important;
+        }
+
         [data-testid="stAppViewContainer"] h1,
         [data-testid="stAppViewContainer"] .stMarkdown h1 {
-            font-size: 1.5rem !important;
-            padding: 6px 12px !important;
+            font-size: 1.28rem !important;
+            color: #5ef9ff !important;
         }
         [data-testid="stAppViewContainer"] h2,
         [data-testid="stAppViewContainer"] .stMarkdown h2 {
-            font-size: 1.25rem !important;
-            padding: 6px 12px !important;
+            font-size: 1.12rem !important;
+            color: #7ecbff !important;
         }
         [data-testid="stAppViewContainer"] h3,
         [data-testid="stAppViewContainer"] .stMarkdown h3 {
-            font-size: 1.05rem !important;
-        }
-        .stButton > button {
-            height: 2.7em !important;
-            font-size: 0.92rem !important;
-            border-radius: 10px !important;
+            font-size: 1rem !important;
+            color: #8de8ff !important;
         }
         p, li, label, .stCaption {
-            font-size: 0.92rem !important;
+            font-size: 0.91rem !important;
+            color: #d3e9ff !important;
+            text-align: left !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.04);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, rgba(0, 200, 255, 0.85), rgba(95, 98, 255, 0.85));
+            border-radius: 10px;
         }
         </style>
         """, unsafe_allow_html=True)
@@ -390,6 +520,18 @@ def apply_device_mode_styles(device_mode):
             padding-top: 4rem !important;
             padding-left: 1.4rem !important;
             padding-right: 1.4rem !important;
+        }
+        [data-testid="stHeader"] {
+            background: transparent !important;
+            border-bottom: none !important;
+        }
+        [data-testid="stAppViewContainer"] {
+            background:
+                radial-gradient(circle at 8% 12%, rgba(0, 245, 255, 0.22) 0%, rgba(0, 245, 255, 0) 34%),
+                radial-gradient(circle at 88% 14%, rgba(255, 110, 199, 0.24) 0%, rgba(255, 110, 199, 0) 32%),
+                radial-gradient(circle at 22% 84%, rgba(140, 255, 178, 0.22) 0%, rgba(140, 255, 178, 0) 34%),
+                radial-gradient(circle at 82% 82%, rgba(255, 214, 102, 0.20) 0%, rgba(255, 214, 102, 0) 30%),
+                linear-gradient(130deg, #0e1a34 0%, #192b52 30%, #1c295e 55%, #15385a 100%) !important;
         }
         </style>
         """, unsafe_allow_html=True)
@@ -410,6 +552,74 @@ for k, v in defaults.items():
 apply_device_mode_styles(st.session_state.device_mode)
 is_mobile = st.session_state.device_mode == "mobile"
 
+
+def render_page_heading(title, subtitle):
+    mobile_mode = st.session_state.get("device_mode") == "mobile"
+    if mobile_mode:
+        st.markdown(f"""
+        <div style="
+            background: linear-gradient(145deg, rgba(10, 20, 38, 0.9), rgba(14, 26, 48, 0.82));
+            border: 1px solid rgba(66, 244, 231, 0.32);
+            border-radius: 16px;
+            padding: 16px 14px;
+            margin: 0 0 16px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.30);
+            text-align: center;
+        ">
+            <div style="
+                font-size: 1.35rem;
+                font-weight: 900;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;
+                line-height: 1.2;
+                margin-bottom: 6px;
+                color: #5ef9ff;
+                text-shadow: 0 0 14px rgba(94, 249, 255, 0.35);
+            ">{title}</div>
+            <div style="
+                font-size: 0.93rem;
+                color: #d3e9ff;
+                line-height: 1.5;
+                font-weight: 700;
+                letter-spacing: 0.2px;
+                text-align: center;
+            ">{subtitle}</div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown(f"""
+        <div style="
+            background: linear-gradient(130deg, rgba(92,174,255,0.22), rgba(168,85,247,0.20), rgba(16,185,129,0.15));
+            border: 1px solid rgba(170, 208, 255, 0.45);
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin: 0 0 22px 0;
+            box-shadow: 0 14px 30px rgba(8, 20, 40, 0.33);
+            text-align: center;
+        ">
+            <div style="
+                font-size: 2rem;
+                font-weight: 900;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                line-height: 1.15;
+                margin-bottom: 7px;
+                background: linear-gradient(90deg, #FFEA00 0%, #83FFD7 45%, #8FC8FF 75%, #D7B3FF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0 3px 22px rgba(90, 170, 255, 0.35);
+            ">{title}</div>
+            <div style="
+                font-size: 1.02rem;
+                color: #ecf4ff;
+                line-height: 1.55;
+                font-weight: 700;
+                letter-spacing: 0.25px;
+                text-align: center;
+            ">{subtitle}</div>
+        </div>
+        """, unsafe_allow_html=True)
+
 # ================= WELCOME =================
 if st.session_state.page == "welcome":
     st.markdown(f"""
@@ -423,12 +633,7 @@ if st.session_state.page == "welcome":
 
 # ================= DEVICE SETUP (SECOND PAGE) =================
 elif st.session_state.page == "device_setup":
-    st.markdown("""
-    <h2 style="margin-bottom: 10px;"> CHOOSE YOUR DEVICE VIEW </h2>
-    <p style="font-size: 16px; color: #e0e0e0; margin-bottom: 28px;">
-        Pick the layout that matches your device for better readability.
-    </p>
-    """, unsafe_allow_html=True)
+    render_page_heading("CHOOSE YOUR DEVICE VIEW", "Pick the layout that matches your device for better readability.")
 
     if is_mobile:
         col1 = st.container()
@@ -470,10 +675,7 @@ elif st.session_state.page == "device_setup":
 
 # ================= ROLE =================
 elif st.session_state.page == "role":
-    st.markdown("""
-    <h2 style="margin-bottom: 10px;"> SELECT YOUR ROLE </h2>
-    <p style="font-size: 16px; color: #e0e0e0; margin-bottom: 40px;">Choose how you'd like to use our platform</p>
-    """, unsafe_allow_html=True)
+    render_page_heading("SELECT YOUR ROLE", "Choose how you'd like to use our platform")
     
     if is_mobile:
         col1 = st.container()
