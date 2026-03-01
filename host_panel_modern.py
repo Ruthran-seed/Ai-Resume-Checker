@@ -135,31 +135,41 @@ def create_job_entry(title, location, description, keywords, posted_by=None):
 # ============ MODERN CSS STYLING ============
 MODERN_CSS = """
 <style>
+:root {
+    --host-accent: #A8D5BA;
+    --host-accent-2: #7ED321;
+    --host-card-border: rgba(168, 213, 186, 0.26);
+    --host-soft-bg: rgba(255,255,255,0.06);
+}
+
 /* Main container styling */
 .host-panel-container {
-    background: linear-gradient(135deg, rgba(10, 14, 20, 1), rgba(20, 25, 35, 1));
+    background: radial-gradient(circle at top right, rgba(168,213,186,0.12), rgba(0,0,0,0) 45%), linear-gradient(135deg, rgba(8, 12, 18, 1), rgba(18, 24, 36, 1));
     border-radius: 16px;
     padding: 24px;
     margin: 0 -16px;
+    border: 1px solid rgba(168, 213, 186, 0.12);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.35);
 }
 
 /* Header section */
 .panel-header {
     text-align: center;
     margin-bottom: 32px;
-    padding: 28px;
-    background: linear-gradient(135deg, rgba(168, 213, 186, 0.1), rgba(168, 213, 186, 0.05));
-    border-radius: 16px;
-    border: 1px solid rgba(168, 213, 186, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(168, 213, 186, 0.15), rgba(126, 211, 33, 0.07));
+    border-radius: 18px;
+    border: 1px solid rgba(168, 213, 186, 0.26);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(10px);
 }
 
 .panel-title {
-    color: #A8D5BA;
-    font-size: 28px;
+    color: var(--host-accent);
+    font-size: 30px;
     font-weight: 700;
     margin: 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 .panel-subtitle {
@@ -179,21 +189,21 @@ MODERN_CSS = """
 
 /* Card styling */
 .job-card {
-    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-    border: 1px solid rgba(168, 213, 186, 0.25);
+    background: linear-gradient(140deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    border: 1px solid var(--host-card-border);
     border-radius: 12px;
     padding: 20px;
     margin: 16px 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
 }
 
 .job-card:hover {
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-    border-color: rgba(168, 213, 186, 0.4);
+    background: linear-gradient(135deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.06) 100%);
+    border-color: rgba(168, 213, 186, 0.5);
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(168, 213, 186, 0.15);
+    box-shadow: 0 14px 28px rgba(168, 213, 186, 0.20);
 }
 
 /* Candidate card */
@@ -221,8 +231,8 @@ MODERN_CSS = """
 }
 
 .metric-card {
-    background: linear-gradient(135deg, rgba(168, 213, 186, 0.1), rgba(168, 213, 186, 0.05));
-    border: 1px solid rgba(168, 213, 186, 0.2);
+    background: linear-gradient(135deg, rgba(168, 213, 186, 0.14), rgba(168, 213, 186, 0.06));
+    border: 1px solid rgba(168, 213, 186, 0.30);
     border-radius: 12px;
     padding: 16px;
     text-align: center;
@@ -238,7 +248,7 @@ MODERN_CSS = """
 .metric-value {
     font-size: 24px;
     font-weight: 700;
-    color: #A8D5BA;
+    color: var(--host-accent);
     margin: 8px 0;
 }
 
@@ -310,11 +320,35 @@ MODERN_CSS = """
 
 /* Filter box */
 .filter-box {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(168, 213, 186, 0.15);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(168, 213, 186, 0.24);
     border-radius: 10px;
     padding: 16px;
     margin-bottom: 20px;
+}
+
+/* Inputs and selectors */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+[data-testid="stNumberInput"] input {
+    background: linear-gradient(140deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05)) !important;
+    border: 1px solid rgba(168, 213, 186, 0.34) !important;
+    border-radius: 12px !important;
+    color: #f4fff6 !important;
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus,
+[data-testid="stNumberInput"] input:focus {
+    border-color: rgba(168, 213, 186, 0.90) !important;
+    box-shadow: 0 0 0 3px rgba(168, 213, 186, 0.22) !important;
+}
+
+[data-testid="stButton"] button {
+    border-radius: 12px !important;
+    border: 1px solid rgba(168, 213, 186, 0.35) !important;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25) !important;
 }
 
 /* Header gradient text */

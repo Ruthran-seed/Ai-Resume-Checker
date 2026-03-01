@@ -269,6 +269,81 @@ st.markdown("""
     padding-left: 1.2rem !important;
     padding-right: 1.2rem !important;
 }
+
+/* Premium shell look */
+[data-testid="stAppViewContainer"] .block-container > div {
+    background: linear-gradient(145deg, rgba(10, 18, 35, 0.58), rgba(22, 34, 62, 0.44));
+    border: 1px solid rgba(170, 208, 255, 0.22);
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 18px 40px rgba(2, 8, 23, 0.34);
+    backdrop-filter: blur(10px);
+}
+
+/* Inputs / text areas / select boxes */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+[data-testid="stNumberInput"] input,
+[data-testid="stDateInput"] input {
+    background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)) !important;
+    border: 1px solid rgba(170, 208, 255, 0.36) !important;
+    border-radius: 12px !important;
+    color: #f8fbff !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 6px 18px rgba(5, 14, 30, 0.28);
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus,
+[data-testid="stNumberInput"] input:focus {
+    border-color: rgba(107, 203, 255, 0.88) !important;
+    box-shadow: 0 0 0 3px rgba(80, 185, 255, 0.20) !important;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* Tabs and expanders */
+[data-testid="stTabs"] button {
+    border-radius: 10px !important;
+    border: 1px solid rgba(170, 208, 255, 0.24) !important;
+    margin-right: 6px !important;
+}
+
+[data-testid="stExpander"] {
+    border: 1px solid rgba(170, 208, 255, 0.22) !important;
+    border-radius: 12px !important;
+    background: rgba(10, 20, 36, 0.40) !important;
+}
+
+/* Better table/dataframe readability */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid rgba(170, 208, 255, 0.24);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Nicer scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(124, 182, 255, 0.8), rgba(90, 132, 255, 0.8));
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(146, 198, 255, 0.92), rgba(110, 152, 255, 0.92));
+}
 </style>
 """, unsafe_allow_html=True)
 
